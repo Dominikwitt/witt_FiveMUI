@@ -1,0 +1,396 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            <![endif]-->
+            <title>LAPD Intranet</title>
+            <!-- BOOTSTRAP CORE STYLE  -->
+            <link href="assets/css/bootstrap.css" rel="stylesheet" />
+            <!-- FONT AWESOME STYLE  -->
+            <link href="assets/css/font-awesome.css" rel="stylesheet" />
+            <!-- CUSTOM STYLE  -->
+            <link href="assets/css/style.css" rel="stylesheet" /> 
+            <!-- GOOGLE FONT -->
+            <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+        </head>
+<?php
+session_start();
+
+if (isset($_SESSION['id'])) {
+    echo '
+        <body>
+            <div class="navbar navbar-inverse set-radius-zero" >
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.php">
+                            <img src="https://i.imgur.com/BQoTEoz.png" width=180 height=70/>
+                        </a>
+                    </div>
+                    <div class="right-div">
+                        <a href="logout.php" class="btn btn-danger pull-right">Abmelden</a>
+                    </div>
+                </div>
+            </div>
+            <!-- LOGO HEADER END-->
+            <section class="menu-section">
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-md-12">
+                            <div class="navbar-collapse collapse ">
+                                <ul id="menu-top" class="nav navbar-nav navbar-right">
+                                    <li>
+                                        <a href="index.php" class="menu-top-active"> Start Seite</a>
+                                    </li>
+                                    <li>
+                                        <a href="add_criminal.php">Akte Anlegen</a>
+                                    </li>
+									<li>
+                                        <a href="bg.html" class="menu-top-active">Bußgeld Katalog</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- MENU SECTION END-->
+            <!-- Begin BGB -->
+            
+            <div class="messageBody">
+                                        
+                                        
+                
+                
+                <div class="messageText" itemprop="text">
+                                                
+                    <div class="messageTableOverflow"><table><tbody><tr><td>Bußgeldkatalog
+</td><td colspan="4" class="text-center">Hinweis: Alle Monate werden nach Minuten berechnet!<br>Ein Spieler darf maximal 240 Monate erhalten!</td></tr><tr><td><b>Straßenverkehrsordnung</b>
+</td>
+
+
+
+</tr><tr><td>Paragraph
+</td><td>Gesetz
+</td><td>Strafe
+</td><td>Haft
+</td><td>Staatsanwalt/Richter?
+</td></tr><tr><td>§ 1 StVO
+</td><td>Führen eines KFZ Klasse A ohne   entsprechende Lizenz
+</td><td>300$
+</td><td>0 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 1 StVO
+</td><td>Führen eines KFZ Klasse B ohne   entsprechende Lizenz
+</td><td>500$
+</td><td>0 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 1 StVO
+</td><td>Führen eines Wasserfahrzeuges   ohne entsprechende Lizenz
+</td><td>500$
+</td><td>0 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 1 StVO
+</td><td>Führen eines Fahrzeuges ohne   Zulassung
+</td><td>1500$
+</td><td>0 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 2 Abs. 4 StVO
+</td><td>Fahren trotz Fahruntauglichkeit   (unter Drogeneinfluss)
+</td><td>1500$
+</td><td>20 Mon.
+</td><td>Nein</td></tr><tr><td>§ 3 Abs. 1 StVO
+</td><td>Fehlverhalten im Straßenverkehr
+</td><td>1000$
+</td><td>0 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 3 Abs. 2 StVO
+</td><td>Rettungsfahrzeuge blockieren
+</td><td>3000$
+</td><td>20 Mon.
+</td><td>Nein</td></tr><tr><td>§ 3 Abs. 3 StVO
+</td><td>Falsch Parken
+</td><td>250$
+</td><td>0 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 4 StVO
+</td><td>Fahren auf der falschen   Fahrbahnseite
+</td><td>1000$
+</td><td>0 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 4 StVO
+</td><td>Fahren Abseits der Straßen</td><td>500$
+</td><td>0 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 6 Abs. 1 StVO
+</td><td>50 - 100 KM/H   Geschwindigkeitsüberschreitung
+</td><td>2000$
+</td><td>20 Mon.
+</td><td>Nein</td></tr><tr><td>§ 6 Abs. 2 StVO
+</td><td>ab 100 KM/H   Geschwindigkeitsüberschreitung
+</td><td>5000$
+</td><td>20 Mon.
+</td><td>Nein</td></tr><tr><td><b>Luftverkehrsordnung</b>
+</td>
+
+
+
+</tr><tr><td>Paragraph
+</td><td>Gesetz
+</td><td>Strafe
+</td><td>Haft
+</td><td>Staatsanwalt/Richter?
+</td></tr><tr><td>§ 1 LuftVO
+</td><td>Führen eines Luftfahrzeuges ohne   entsprechende Lizenz
+</td><td>3000$
+</td><td>40 Mon.
+</td><td>Ja
+</td></tr><tr><td>§ 2 Abs. 2 LuftVO
+</td><td>Mindestflughöhe unterschritten
+</td><td>1500$
+</td><td>0 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 2 Abs. 3 LuftVO
+</td><td>Missachtung der Flugverbotszone
+</td><td>3000$
+</td><td>20 Mon.
+</td><td>Ja
+</td></tr><tr><td>§ 2 Abs. 4 LuftVO
+</td><td>Landen abseits von Landebahnen
+</td><td>2500$
+</td><td>0 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 3 Abs. 4 LuftVO
+</td><td>Fliegen trotz Fluguntauglichkeit
+</td><td>2000$
+</td><td>60 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 3 Abs.13 LuftVO
+</td><td>Fallschirmspringen in   Flugverbotszonen
+</td><td>1000$
+</td><td>0 Mon.
+</td><td>Nein
+</td></tr><tr><td><b>Betäubungsmittelgesetz</b>
+</td>
+
+
+
+</tr><tr><td>Paragraph
+</td><td>Gesetz
+</td><td>Strafe
+</td><td>Haft
+</td><td>Staatsanwalt/Richter?
+</td></tr><tr><td>§ 1 Abs. 1 BtMG
+</td><td>Besitz von Betäubungsmitteln   (Person, PKW und Wasserfahrzeug)
+</td><td>50$
+</td><td>20 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 1 Abs. 2 BtMG
+</td><td>Besitz von Betäubungsmitteln   (LKW)
+</td><td>75$
+</td><td>40 Mon.
+</td><td>Ja</td></tr><tr><td>§ 2 Abs. 1 BtMG
+</td><td>Besitz von unverarbeiteten   Produkten
+</td><td>25$
+</td><td>0 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 2 Abs. 2 BtMG
+</td><td>Besitz von Betäubungsmitteln   (Haus)
+</td><td>50$
+</td><td>60 Mon.
+</td><td>Ja
+</td></tr><tr><td>§ 3 BtMG
+</td><td>Handel mit Betäubungsmitteln   (Ankauf)
+</td><td>2000$
+</td><td>30 Mon.
+</td><td>Ja
+</td></tr><tr><td>§ 3 BtMG
+</td><td>Handel mit Betäubungsmitteln   (Verkauf)
+</td><td>4000$
+</td><td>60 Mon.
+</td><td>Ja
+</td></tr><tr><td>§ 4 BtMG
+</td><td>Herstellung von Betäubungsmitteln
+</td><td>6000$
+</td><td>30 Mon.
+</td><td>Ja
+</td></tr><tr><td><b>Waffengesetz</b>
+</td>
+
+
+
+</tr><tr><td>Paragraph
+</td><td>Gesetz
+</td><td>Strafe
+</td><td>Haft
+</td><td>Staatsanwalt/Richter?
+</td></tr><tr><td>§ 1 WfG
+</td><td>Besitz von legaler Waffe ohne   Lizenz
+</td><td>1250$
+</td><td>20 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 2 WfG
+</td><td>Besitz von illegalen   Waffenzubehör (Schalldämpfer)</td><td>500$
+</td><td>0 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 3  WfG
+</td><td>Besitz von illegalen Waffen   (Kal.50 Pistole)
+</td><td>2500$
+</td><td>30 Mon.
+</td><td>Nein
+</td></tr><tr><td>&nbsp;
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td><td>&nbsp;
+</td></tr><tr><td>§ 3 Abs. 1 WfG
+</td><td>Besitz von illegalen Waffen   (Langwaffe)
+</td><td>3250$
+</td><td>60 Mon.
+</td><td>Ja
+</td></tr><tr><td>§ 4 WfG
+</td><td>Besitz von Dienstwaffen außerhalb   des Dienstes
+</td><td>1000$
+</td><td>0 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 5  WfG
+</td><td>Waffenhandel
+</td><td>5000$
+</td><td>120 Mon.
+</td><td>Ja
+</td></tr><tr><td><b>Strafgesetzbuch</b>
+</td>
+
+
+
+</tr><tr><td>Paragraph
+</td><td>Gesetz
+</td><td>Strafe
+</td><td>Haft
+</td><td>Staatsanwalt/Richter?
+</td></tr><tr><td>§ 1 Abs. 1 StGB
+</td><td>Beleidigung
+</td><td>500$
+</td><td>0 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 2 Abs. 1 StGB
+</td><td>Belästigung / Nachstellung
+</td><td>500$
+</td><td>0 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 2 Abs. 2 StGB
+</td><td>Belästigung / Nachstellung (mit   Gefahr für das Opfer)
+</td><td>1000$
+</td><td>20 Mon.
+</td><td>Nein</td></tr><tr><td>§ 3 Abs. 1 StGB
+</td><td>Unterlassene Hilfeleistung
+</td><td>2000$
+</td><td>0 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 3 Abs. 2 StGB
+</td><td>Unterlassene Hilfeleistung   (Behinderung)
+</td><td>3250$
+</td><td>20 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 4 Abs. 1 StGB
+</td><td>Freiheitsberaubung / Entführung
+</td><td>5000$
+</td><td>60 Mon.
+</td><td>Ja
+</td></tr><tr><td>§ 4 Abs. 2 StGB
+</td><td>Freiheitsberaubung / Entführung   (mit Gefahr für das Opfer)
+</td><td>7500$
+</td><td>90 Mon.
+</td><td>Ja
+</td></tr><tr><td>§ 4 Abs. 3 StGB
+</td><td>Freiheitsberaubung / Entführung   (mit Todesfolge)
+</td><td>10000$
+</td><td>120 Mon.
+</td><td>Ja
+</td></tr><tr><td>§ 4 Abs. 4 StGB
+</td><td>versuchte Freiheitsberaubung /   Entführung
+</td><td>2500$
+</td><td>30 Mon.
+</td><td>Ja
+</td></tr><tr><td>§ 5 Abs. 1 StGB
+</td><td>Geiselnahme
+</td><td>8000$
+</td><td>60 Mon.
+</td><td>Ja
+</td></tr><tr><td>§ 5 Abs. 2 StGB
+</td><td>Geiselnahme mit Todesfolge
+</td><td>12000$
+</td><td>120 Mon.
+</td><td>Ja
+</td></tr><tr><td>§ 5 Abs. 3 StGB
+</td><td>Versuchte Geiselnahme
+</td><td>5000$
+</td><td>30 Mon.
+</td><td>Ja</td></tr><tr><td>§ 6 Abs. 1 StGB
+</td><td>Körperverletzung
+</td><td>2000$
+</td><td>20 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 6 Abs. 2 StGB
+</td><td>Körperverletzung in besonders   schweren Fall
+</td><td>4000$
+</td><td>45 Mon.
+</td><td>Ja
+</td></tr><tr><td>§ 7 Abs. 1 StGB</td><td>Versuchter Mord</td><td>12500$</td><td>180 Mon.</td><td>Ja</td></tr><tr><td>§ 7 Abs. 2 StGB</td><td>Mord</td><td>18000$</td><td>240 Mon.</td><td>Ja</td></tr><tr><td><b>Öffentliches Gesetzbuch</b>
+</td>
+
+
+
+</tr><tr><td>Paragraph
+</td><td>Gesetz
+</td><td>Strafe
+</td><td>Haft
+</td><td>Staatsanwalt/Richter?
+</td></tr><tr><td>§ 1  ÖGB
+</td><td>Ausweispflicht
+</td><td>250$
+</td><td>0 Mon.
+</td><td>Nein
+</td></tr><tr><td>§ 2 ÖGB
+</td><td>Vermummungsverbot
+</td><td>500$
+</td><td>0 Mon.
+</td><td>Nein
+</td></tr></tbody></table></div>						</div>
+                
+                
+            </div>
+                        </div>
+                    </div>
+                    <!-- /. ROW  -->
+                </div>
+                <!-- /. ROW  -->
+            </div>
+            <!-- /. ROW  -->
+            <!-- End  Hover Rows  -->
+        </div>
+        <div class="col-md-6">
+            <!--    Context Classes  -->
+            <!--  end  Context Classes  -->
+        </div>
+    </div>
+    <!-- /. ROW  -->
+</div> </div> <!-- CONTENT-WRAPPER SECTION END--> <section class="footer-section">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+                   &copy; 2020 LAPD |
+            <a href="https://www.star-roleplay.eu/" target="_blank"  > Coded by : DominikWitt</a>
+        </div>
+    </div>
+</div> </section> <!-- FOOTER SECTION END--> <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  --> <!-- CORE JQUERY  --> <script src="assets/js/jquery-1.10.2.js"></script> <!-- BOOTSTRAP SCRIPTS  --> <script src="assets/js/bootstrap.js"></script> <!-- DATATABLE SCRIPTS  --> <script src="assets/js/dataTables/jquery.dataTables.js"></script> <script src="assets/js/dataTables/dataTables.bootstrap.js"></script> <!-- CUSTOM SCRIPTS  --> <script src="assets/js/custom.js"></script> </body>
+</html>
+

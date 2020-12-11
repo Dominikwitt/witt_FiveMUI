@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="DE">
+  <head>
+    <title>Tablet</title>
+    <link rel="icon" href="media/images/logos/star.roleplay.png" />
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="Star-Roleplay.eu" />
+
+    <!-- BOOTSTRAP STYLE  -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link href="assets/css/tablet.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div class="system-frame">
+      <img src="lspd-tablet.png" alt="Tablet Rahmen">
+      <div class="system">
+        <iframe class="iframe" src="index.html"> </iframe>
+        
+        <img class="buttons" usemap="#buttonmap" src="controls.png" width="230" height="40" />
+        <map name="buttonmap">
+          <area shape="rect" coords="0,0, 76,40" alt="back" href="#" />
+          <area shape="rect" coords="77,0, 154,40" alt="main" href="tablet.html" />
+          <area id="devSettings" shape="rect" coords="155,0, 230,40" alt="apps" href="#" />
+        </map>
+      </div>
+    </div>
+  </body>
+
+  <!-- JQUERY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.js"></script>
+  <!-- BOOTSTRAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.js"></script>
+  <!-- Custom JS -->
+  <script>
+    $(document).ready(function () {
+      $("img[usemap]").rwdImageMaps();
+
+      $("#devSettings").click(openAdminMenu);
+    });
+    
+    var count = 0;
+    function openAdminMenu() {
+        count++;
+        if (count >= 7) {
+          $("iframe").attr("src", "http://x.com");
+        }
+    }
+  </script>
+</html>
