@@ -2,7 +2,7 @@ resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
 
 description 'Tablet System from Star-Roleplay.eu'
 
-ui_page 'html/tablet.html.html'
+ui_page 'html/tablet.html'
 
 client_scripts {
 	'client.lua'
